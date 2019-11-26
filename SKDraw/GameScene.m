@@ -116,6 +116,35 @@
     node.blendMode = SCNBlendModeScreen;
     node.fillShader = [SKShader shaderWithFileNamed:@"eraser.fsh"];
     [self addChild:node];
+    
+    SKShader*eraser = [SKShader shaderWithFileNamed:@"eraser.fsh"];
+    
+    CGPoint(^randPoint)(void) = ^{
+        return CGPointMake(random()%400, random()%400);
+    };
+    
+    // to support infinite nodes, i should cache to the texture
+    // https://stackoverflow.com/questions/24553245/poor-performance-with-skshapenode-in-sprite-kit
+    //
+    // should also try union the paths into a single node between erases.
+    
+    for (NSInteger i=0; i<1000; i++) {
+        path = [UIBezierPath bezierPath];
+        [path moveToPoint:randPoint()];
+        [path addCurveToPoint:randPoint() controlPoint1:randPoint() controlPoint2:randPoint()];
+        
+        node = [SKShapeNode shapeNodeWithPath:[path CGPath]];
+        node.lineWidth = 10;
+
+        if(random() % 4){
+            node.strokeColor = [UIColor blueColor];
+        }else{
+            node.strokeColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+            node.blendMode = SCNBlendModeScreen;
+            node.strokeShader = eraser;
+        }
+        [self addChild:node];
+    }
 }
 
 
@@ -129,7 +158,7 @@
 - (void)touchMovedToPoint:(CGPoint)pos {
     SKShapeNode *n = [_spinnyNode copy];
     n.position = pos;
-    n.strokeColor = [SKColor blueColor];
+    n.strokeColor = [SKColor systemPinkColor];
     [self addChild:n];
 }
 
