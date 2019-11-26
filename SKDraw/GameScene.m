@@ -87,19 +87,35 @@
     node.strokeColor = [UIColor blueColor];
     [self addChild:node];
 
+    // eraser
+    
     path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(40, 40)];
     [path addCurveToPoint:CGPointMake(175, 175) controlPoint1:CGPointMake(200, 0) controlPoint2:CGPointMake(100, 20)];
 
-    
     node = [SKShapeNode shapeNodeWithPath:[path CGPath]];
     node.lineWidth = 10;
-//    node.strokeColor = [UIColor redColor];
     node.strokeColor = [[UIColor blackColor] colorWithAlphaComponent:0];
     node.blendMode = SCNBlendModeScreen;
     node.strokeShader = [SKShader shaderWithFileNamed:@"eraser.fsh"];
     [self addChild:node];
     
+    
+    // filled paint
+    
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithRect:CGRectMake(20, 320, 50, 50)] CGPath]];
+    node.lineWidth = 0;
+    node.fillColor = [UIColor blueColor];
+    [self addChild:node];
+
+
+    // filled eraser
+    
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithRect:CGRectMake(30, 330, 10, 10)] CGPath]];
+    node.fillColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+    node.blendMode = SCNBlendModeScreen;
+    node.fillShader = [SKShader shaderWithFileNamed:@"eraser.fsh"];
+    [self addChild:node];
 }
 
 
