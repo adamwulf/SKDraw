@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import <SceneKit/SceneKit.h>
 
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
@@ -34,6 +35,71 @@
                                                 [SKAction fadeOutWithDuration:0.5],
                                                 [SKAction removeFromParent],
                                                 ]]];
+    
+    
+    
+    UIBezierPath *path;
+    SKShapeNode *node;
+    
+    
+    // clear screen
+    
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 400, 400)] CGPath]];
+    node.fillColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+    node.lineWidth = 0;
+    node.blendMode = SCNBlendModeScreen;
+    node.fillShader = [SKShader shaderWithSource:@""];
+    [self addChild:node];
+
+    
+    
+    // draw corners
+    
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectInset(CGRectMake(0, 0, 0, 0), -10, -10)] CGPath]];
+    node.fillColor = [UIColor blueColor];
+    node.lineWidth = 0;
+    [self addChild:node];
+
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectInset(CGRectMake(0, 400, 0, 0), -10, -10)] CGPath]];
+    node.fillColor = [UIColor blueColor];
+    node.lineWidth = 0;
+    [self addChild:node];
+
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectInset(CGRectMake(400, 0, 0, 0), -10, -10)] CGPath]];
+    node.fillColor = [UIColor blueColor];
+    node.lineWidth = 0;
+    [self addChild:node];
+
+    node = [SKShapeNode shapeNodeWithPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectInset(CGRectMake(400, 400, 0, 0), -10, -10)] CGPath]];
+    node.fillColor = [UIColor blueColor];
+    node.lineWidth = 0;
+    [self addChild:node];
+    
+    
+    // draw line
+    
+    path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(50, 50)];
+    [path addCurveToPoint:CGPointMake(175, 175) controlPoint1:CGPointMake(200, 0) controlPoint2:CGPointMake(100, 20)];
+    
+    node = [SKShapeNode shapeNodeWithPath:[path CGPath]];
+    node.lineWidth = 10;
+    node.strokeColor = [UIColor blueColor];
+    [self addChild:node];
+
+    path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(40, 40)];
+    [path addCurveToPoint:CGPointMake(175, 175) controlPoint1:CGPointMake(200, 0) controlPoint2:CGPointMake(100, 20)];
+
+    
+    node = [SKShapeNode shapeNodeWithPath:[path CGPath]];
+    node.lineWidth = 10;
+//    node.strokeColor = [UIColor redColor];
+    node.strokeColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+    node.blendMode = SCNBlendModeScreen;
+    node.strokeShader = [SKShader shaderWithFileNamed:@"eraser.fsh"];
+    [self addChild:node];
+    
 }
 
 

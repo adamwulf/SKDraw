@@ -16,10 +16,11 @@
 		C5B2E28C238CC335002B72B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B2E28B238CC335002B72B3 /* Assets.xcassets */; };
 		C5B2E28F238CC335002B72B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B2E28D238CC335002B72B3 /* LaunchScreen.storyboard */; };
 		C5B2E292238CC335002B72B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B2E291238CC335002B72B3 /* main.m */; };
+		C5B2E2E1238CD6E6002B72B3 /* eraser.fsh in Resources */ = {isa = PBXBuildFile; fileRef = C5B2E2E0238CD6E6002B72B3 /* eraser.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C5B2E278238CC333002B72B3 /* sddasfsad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sddasfsad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B2E278238CC333002B72B3 /* SKDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B2E27B238CC333002B72B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5B2E27C238CC333002B72B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C5B2E27E238CC333002B72B3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		C5B2E28E238CC335002B72B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5B2E290238CC335002B72B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B2E291238CC335002B72B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5B2E2E0238CD6E6002B72B3 /* eraser.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = eraser.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,7 @@
 		C5B2E26F238CC333002B72B3 = {
 			isa = PBXGroup;
 			children = (
-				C5B2E27A238CC333002B72B3 /* sddasfsad */,
+				C5B2E27A238CC333002B72B3 /* SKDraw */,
 				C5B2E279238CC333002B72B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,18 +59,19 @@
 		C5B2E279238CC333002B72B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C5B2E278238CC333002B72B3 /* sddasfsad.app */,
+				C5B2E278238CC333002B72B3 /* SKDraw.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C5B2E27A238CC333002B72B3 /* sddasfsad */ = {
+		C5B2E27A238CC333002B72B3 /* SKDraw */ = {
 			isa = PBXGroup;
 			children = (
 				C5B2E27B238CC333002B72B3 /* AppDelegate.h */,
 				C5B2E27C238CC333002B72B3 /* AppDelegate.m */,
 				C5B2E27E238CC333002B72B3 /* GameScene.sks */,
 				C5B2E280238CC333002B72B3 /* Actions.sks */,
+				C5B2E2E0238CD6E6002B72B3 /* eraser.fsh */,
 				C5B2E282238CC333002B72B3 /* GameScene.h */,
 				C5B2E283238CC333002B72B3 /* GameScene.m */,
 				C5B2E285238CC333002B72B3 /* GameViewController.h */,
@@ -79,15 +82,15 @@
 				C5B2E290238CC335002B72B3 /* Info.plist */,
 				C5B2E291238CC335002B72B3 /* main.m */,
 			);
-			path = sddasfsad;
+			path = SKDraw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C5B2E277238CC333002B72B3 /* sddasfsad */ = {
+		C5B2E277238CC333002B72B3 /* SKDraw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C5B2E295238CC335002B72B3 /* Build configuration list for PBXNativeTarget "sddasfsad" */;
+			buildConfigurationList = C5B2E295238CC335002B72B3 /* Build configuration list for PBXNativeTarget "SKDraw" */;
 			buildPhases = (
 				C5B2E274238CC333002B72B3 /* Sources */,
 				C5B2E275238CC333002B72B3 /* Frameworks */,
@@ -97,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = sddasfsad;
-			productName = sddasfsad;
-			productReference = C5B2E278238CC333002B72B3 /* sddasfsad.app */;
+			name = SKDraw;
+			productName = SKDraw;
+			productReference = C5B2E278238CC333002B72B3 /* SKDraw.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C5B2E273238CC333002B72B3 /* Build configuration list for PBXProject "sddasfsad" */;
+			buildConfigurationList = C5B2E273238CC333002B72B3 /* Build configuration list for PBXProject "SKDraw" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C5B2E277238CC333002B72B3 /* sddasfsad */,
+				C5B2E277238CC333002B72B3 /* SKDraw */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +145,7 @@
 				C5B2E28A238CC333002B72B3 /* Main.storyboard in Resources */,
 				C5B2E27F238CC333002B72B3 /* GameScene.sks in Resources */,
 				C5B2E28C238CC335002B72B3 /* Assets.xcassets in Resources */,
+				C5B2E2E1238CD6E6002B72B3 /* eraser.fsh in Resources */,
 				C5B2E28F238CC335002B72B3 /* LaunchScreen.storyboard in Resources */,
 				C5B2E281238CC333002B72B3 /* Actions.sks in Resources */,
 			);
@@ -299,12 +303,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MU27A4SCKC;
-				INFOPLIST_FILE = sddasfsad/Info.plist;
+				INFOPLIST_FILE = SKDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.milestonemade.sddasfsad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.milestonemade.SKDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,12 +320,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MU27A4SCKC;
-				INFOPLIST_FILE = sddasfsad/Info.plist;
+				INFOPLIST_FILE = SKDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.milestonemade.sddasfsad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.milestonemade.SKDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -330,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C5B2E273238CC333002B72B3 /* Build configuration list for PBXProject "sddasfsad" */ = {
+		C5B2E273238CC333002B72B3 /* Build configuration list for PBXProject "SKDraw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5B2E293238CC335002B72B3 /* Debug */,
@@ -339,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C5B2E295238CC335002B72B3 /* Build configuration list for PBXNativeTarget "sddasfsad" */ = {
+		C5B2E295238CC335002B72B3 /* Build configuration list for PBXNativeTarget "SKDraw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5B2E296238CC335002B72B3 /* Debug */,

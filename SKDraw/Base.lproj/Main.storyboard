@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView opaque="NO" contentMode="scaleToFill" allowsTransparency="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fei-99-253">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="Fei-99-253" secondAttribute="bottom" id="ck4-aZ-S66"/>
+                            <constraint firstItem="Fei-99-253" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="iwG-CW-0d1"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Fei-99-253" secondAttribute="trailing" id="q0v-fg-fmQ"/>
+                            <constraint firstItem="Fei-99-253" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="wNy-Ey-mEJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <connections>
+                        <outlet property="_skView" destination="Fei-99-253" id="tJn-ns-0BT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Sk4-Wa-aS1">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </sceneKitView>
+            </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+    </scenes>
+</document>

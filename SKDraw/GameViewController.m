@@ -9,24 +9,34 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
-@implementation GameViewController
+@implementation GameViewController{
+    IBOutlet SKView *_skView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Load the SKScene from 'GameScene.sks'
-    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
+//    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
+    
+    GameScene *scene = [GameScene node];
+    [scene setSize:CGSizeMake(400, 400)];
     
     // Set the scale mode to scale to fit the window
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.scaleMode = SKSceneScaleModeFill;
     
-    SKView *skView = (SKView *)self.view;
+    _skView = (SKView *)[[self.view subviews] firstObject];
+    
+    self.view.backgroundColor = [UIColor purpleColor];
+    
+    _skView.opaque = NO;
+    _skView.backgroundColor = [UIColor clearColor];
+    _skView.allowsTransparency = YES;
+    _skView.showsFPS = YES;
+    _skView.showsNodeCount = YES;
     
     // Present the scene
-    [skView presentScene:scene];
-    
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    [_skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate {
